@@ -1,0 +1,104 @@
+// VARIABLES
+@import "./src/styles/variables.scss";
+
+.user-links {
+  height: 72px;
+  background: $_user-links_background;
+  transition: height $_2ms ease;
+  z-index: 55;
+  .compact & {
+    background: none;
+    height: 32px;
+  }
+}
+
+.links-ctn {
+  position: relative;
+  float: left;
+  padding-left: 288px;
+  box-sizing: border-box;
+  transition: padding $_2ms ease;
+  .compact & {
+    float: none;
+    padding-left: 88px;
+    width: 100%;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $_links-ctn_background;
+      height: 1px;
+    }
+  }
+}
+.link {
+  display: inline-block;
+  margin-right: 32px;
+  color: $_white;
+  height: 12px;
+  font-family: Arial;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 72px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  transition: color $_2ms ease, line-height $_2ms ease, border $_3ms ease-in;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+
+  &.is-active {
+    font-weight: bold;
+    color: $_light-blue;
+    border-bottom: 2px solid $_light-blue;
+  }
+
+  .compact & {
+    line-height: 12px;
+    letter-spacing: 1px;
+    height: 12px;
+    font-size: 12px;
+    padding-bottom: 8px;
+    padding-top: 10px;
+  }
+}
+
+.outside-links {
+  float: right;
+  padding: 24px 0 24px 0;
+  .compact & {
+    padding: 16px 0 24px 0;
+  }
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.icon-red {
+  @extend .icon;
+  background-color: $_red;
+}
+
+.icon-green {
+  @extend .icon;
+  background-color: $_green;
+}
+
+.icon-blue {
+  @extend .icon;
+  background-color: $_blue;
+}
+
+.icon-yellow {
+  @extend .icon;
+  background-color: $_yellow;
+}

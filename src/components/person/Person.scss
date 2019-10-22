@@ -1,0 +1,84 @@
+@import "./src/styles/variables.scss";
+
+.section {
+  &.hero {
+    position: relative;
+    z-index: 100;
+    height: 424px;
+    &:after {
+      position: absolute;
+      content: "";
+      background: $_hero-section_background;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    .hero-img {
+      width: 100%;
+      height: fit-content;
+      max-height: 424px;
+      object-fit: cover;
+    }
+  }
+
+  &.user {
+    position: relative;
+    z-index: 101;
+    margin-top: -128px;
+    transition: margin $_2ms ease;
+
+    .compact & {
+      margin-top: -256px;
+    }
+
+    .user-image {
+      position: absolute;
+      height: 256px;
+      width: 256px;
+      background-position: center, center;
+      background-size: cover;
+      border-radius: 100%;
+      margin: 0 20px 0 0;
+      transition: height $_2ms ease, width $_2ms ease;
+
+      .compact & {
+        height: 64px;
+        width: 64px;
+      }
+    }
+
+    .user-info {
+      padding: 68px 0 24px 288px;
+      transition: padding $_2ms ease;
+
+      .compact & {
+        padding: 5px 0 10px 88px;
+      }
+    }
+    .user-name {
+      color: $_white;
+      text-transform: uppercase;
+      font-family: $_font-family;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      line-height: 36px;
+      text-shadow: $_text-shadow;
+      z-index: 56;
+      transition: font-size $_1ms ease, line-height $_1ms ease;
+
+      .compact & {
+        letter-spacing: 2px;
+        line-height: 18px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &.links {
+    position: relative;
+    z-index: 100;
+    transition: top $_2ms ease;
+  }
+}

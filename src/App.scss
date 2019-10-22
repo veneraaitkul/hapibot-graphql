@@ -1,0 +1,13 @@
+@import "./src/styles/variables.scss";
+@import "./src/styles/reset.scss";
+
+body {
+  background-color: $_dark-grey;
+  font-family: $_font-family;
+}
+
+.container {
+  position: relative;
+  max-width: 1514px;
+  margin: 0 auto;
+}

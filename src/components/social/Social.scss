@@ -1,0 +1,33 @@
+//VARIABLES
+@import "./src/styles/variables.scss";
+
+.user-stats {
+  float: right;
+  padding-top: 8px;
+}
+
+.stats-data {
+  display: inline-block;
+  text-align: center;
+  &:not(:last-child) {
+    margin-right: 56px;
+  }
+}
+
+.data {
+  margin: 0;
+  color: $_white;
+  font-family: $_font-family;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.name {
+  color: $_white;
+  font-family: $_font-family;
+  margin-top: 7px;
+  font-size: 10px;
+  line-height: 10px;
+  text-transform: uppercase;
+}
